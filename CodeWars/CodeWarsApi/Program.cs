@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeWarsGenerator
+namespace Kata
 {
     internal class Program
     {
