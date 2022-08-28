@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace CodeWarsApi
+namespace CodeWarsGenerator
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("api");
         }
     }
 }

@@ -1,20 +1,18 @@
 ﻿using CodeWarsApi;
-using System;
 
 namespace CodeWarsGenerator
 {
     internal class Program
     {
-        static void Main(string[] _)
+        static void Main(string[] args)
         {
             var api = new CodeWarsApiService();
             var codeChallengeService = new CodeChallengesService(api);
+            var file = new FileWrapper();
+            var generator = new CodeChallengeGenerator(codeChallengeService, file);
 
-            var id = "";
-
-            var challenge = codeChallengeService.GetCodeChallege(id).GetAwaiter().GetResult();
-
-            Console.WriteLine(challenge);
+            var id = "valid-braces";
+            generator.Generate(id).GetAwaiter().GetResult();
         }
     }
 }

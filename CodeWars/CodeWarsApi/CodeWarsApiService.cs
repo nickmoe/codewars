@@ -10,18 +10,15 @@ namespace CodeWarsApi
 
     public class CodeWarsApiService : ICodeWaresApiService
     {
-        public static string BasePath = "https://www.codewars.com/api/v1/";
+        private const string _basePath = "https://www.codewars.com/api/v1/";
 
-        public CodeWarsApiService()
-        {
-
-        }
+        public CodeWarsApiService() { }
 
         public async Task<string> Get(string path)
         {
-            HttpClient client = new HttpClient();
+            var client = new HttpClient();
 
-            string response = await client.GetStringAsync(path);
+            string response = await client.GetStringAsync(_basePath + path);
 
             return response;
         }
