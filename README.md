@@ -1,4 +1,1 @@
 # codewars
-.vscode
-obj
-bin
