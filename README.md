@@ -1,1 +1,4 @@
 # codewars
+.vscode
+obj
+bin
